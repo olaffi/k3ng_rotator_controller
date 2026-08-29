@@ -11960,7 +11960,7 @@ void service_request_queue(){
     control_port->flush();
   #endif // DEBUG_LOOP
 
-  int work_target_raw_azimuth = 0;
+  float work_target_raw_azimuth = 0; // changed from "int" to "float" to work with resolutions finer then one degree, e.g. 0.1 degree
   byte direction_to_go = 0;
   byte within_tolerance_flag = 0;
 
